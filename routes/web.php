@@ -36,15 +36,14 @@ Route::middleware('auth')->group(function(){
         ]);
     })->name('admin.barang');
 
-
-
-});
-
-Route::get('/admin/product', function () {
+    Route::get('/admin/product', function () {
         return view('admin.product', [
         "product" => product::all()
         ]);
     })->name('admin.product');
+
+});
+
 
 Route::get('/login', function(){
     return view('auth.login');
